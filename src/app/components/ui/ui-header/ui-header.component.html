@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+  <button routerLink="/" mat-button>Education Portal</button>
+  <span class="header-spacer"></span>
+  <button routerLink="/auth/login" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" *ngIf="!isActive">
+        <mat-icon>login</mat-icon>
+  </button>
+  <button routerLink="/auth/register" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" *ngIf="!isActive">
+    <mat-icon>person_add_alt</mat-icon>
+</button>
+
+  <button routerLink="/" mat-raised-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" matTooltip="giriş yap" routerLink="Ana Sayfa" *ngIf="isActive">
+  Ana sayfa
+  </button>
+
+  
+  <button routerLink="/lessons" mat-raised-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/lessons" matTooltip="Dersler" *ngIf="isActive">
+    Dersler
+  </button>
+
+  
+  <button routerLink="/panel" mat-raised-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon" routerLink="/panel" matTooltip="Panel" *ngIf="isActive">
+  Panel
+  </button>
+
+</mat-toolbar>
+

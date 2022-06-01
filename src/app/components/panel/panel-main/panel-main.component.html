@@ -1,0 +1,32 @@
+
+<div class="row">
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <span class="nav-link disabled fs-6">Education Portal UI / Panel</span>
+          </li>
+      </ul>
+
+    <ul class="nav justify-content-center">
+        
+        <li class="nav-item">
+          <button mat-button class="nav-link" routerLink="/" color="primary">Ana sayfa</button>
+        </li>
+
+        <li class="nav-item">
+          <button mat-button class="nav-link" routerLink="/panel" color="primary">Panel Ana sayfa</button>
+        </li>
+        
+        <li class="nav-item">
+          <button mat-button class="nav-link" color="warn" (click)="logout()">Çıkış Yap</button>
+        </li>
+      </ul>
+
+    <div class="col-lg-2 col-md-3 col-sm-12">
+        <app-panel-header></app-panel-header>
+    </div>
+    <div class="col-lg-10 col-md-9 col-sm-12">
+        <div class="container mt-5">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

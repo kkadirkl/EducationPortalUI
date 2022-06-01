@@ -1,0 +1,43 @@
+<div class="text-center fs-5 mt-5 mb-5">
+    {{
+        message
+    }}
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                İsim & Soyisim
+            </th>
+            <th>
+                Rol İsmi
+            </th>
+            <th>
+                Durum
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let userOperationClaim of userOperationClaims">
+            <td>
+                {{
+                    userOperationClaim.userFirstName + " " + userOperationClaim.userLastName 
+                }}
+            </td>
+            <td>
+                {{
+                    userOperationClaim.operationClaimName
+                }}
+            </td>
+            <td>
+                {{
+                    userOperationClaim.userOperationClaimIsApproved === true ? 'aktif' : 'aktif değil'
+                }}
+            </td>
+
+            <td >
+                <button mat-button color="warn" (click)="delete(userOperationClaim)">Sil</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

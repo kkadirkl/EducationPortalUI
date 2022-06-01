@@ -1,0 +1,27 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                İsim
+            </th>
+            <th>
+                Durum
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lesson of lessons">
+            <td>
+                {{
+                    lesson.name
+                }}
+            </td>
+
+            <td>
+                {{
+                    lesson.isApproved === true ? 'aktif' : 'aktif değil'
+                }}
+            </td>
+        </tr>
+    </tbody>
+</table>

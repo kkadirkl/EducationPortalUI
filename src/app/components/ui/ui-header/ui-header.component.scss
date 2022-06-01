@@ -1,0 +1,9 @@
+mat-list-item{
+    cursor: pointer;
+    transition: .5s;
+}
+mat-list-item:hover{
+    background-color: #3a3737;
+    color: #ffffff;
+    border-radius: 50px;
+}

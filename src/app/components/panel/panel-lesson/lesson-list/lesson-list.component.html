@@ -1,0 +1,36 @@
+<div class="text-center fs-5 mt-5 mb-5">
+    {{
+        message
+    }}
+</div>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                İsim
+            </th>
+            <th>
+                Durum
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let lesson of lessons">
+            <td>
+                {{
+                    lesson.name
+                }}
+            </td>
+
+            <td>
+                {{
+                    lesson.isApproved === true ? 'aktif' : 'aktif değil'
+                }}
+            </td>
+
+            <td *ngIf="isAdmin">
+                <button mat-button color="warn" (click)="delete(lesson)">Sil</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+<div class="list-group rounded-0 fs-6">
+
+        <button type="button" class=" list-group-item list-group-item-action" >
+            {{
+                email
+            }}
+        </button>
+
+        <button type="button" class=" list-group-item list-group-item-action" matTooltip="hesabınızın sistemdeki oturum süreci bu zaman dolunca hesaptan otomatik olarak çıkış yapılır ">
+            {{
+                expiration|date:'short'
+            }}
+        </button>
+        
+
+    <div class="dropend">
+        <button type="button" class="list-group-item list-group-item-action dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">Ders </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" routerLink="lesson/add" *ngIf="isAdmin">Ekle</button></li>
+            <li><button class="dropdown-item" routerLink="lesson/list">Listele</button></li>
+        </ul>
+    </div>
+
+    <div class="dropend" *ngIf="isAdmin">
+        <button type="button" class="list-group-item list-group-item-action dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">Kullanıcı </button>
+        <ul class="dropdown-menu">
+            <!-- <li><button class="dropdown-item" routerLink="user/add">Ekle</button></li> -->
+            <li><button class="dropdown-item" routerLink="users">Listele</button></li>
+        </ul>
+    </div>
+    
+    <div class="dropend" *ngIf="isAdmin">
+        <button type="button" class="list-group-item list-group-item-action dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">Rol </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" routerLink="operation-claim/add">Ekle</button></li>
+            <li><button class="dropdown-item" routerLink="operation-claim/list">Listele</button></li>
+        </ul>
+    </div> 
+    
+    <div class="dropend" *ngIf="isAdmin">
+        <button type="button" class="list-group-item list-group-item-action dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">Kullanıcı Rolu </button>
+        <ul class="dropdown-menu">
+            <li><button class="dropdown-item" routerLink="user-operation-claim/add">Ekle</button></li>
+            <li><button class="dropdown-item" routerLink="user-operation-claim/list">Listele</button></li>
+        </ul>
+    </div>
+</div>

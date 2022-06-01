@@ -1,0 +1,21 @@
+
+
+  <main class="form-signin text-center mt-5">
+    <form [formGroup]="loginForm">
+      <h1 class="h3 mb-3 fw-normal">Education Portal Giriş İşlemi</h1>
+  
+      <div class="form-floating">
+        <input autocomplete="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" formControlName="email">
+        <label for="floatingInput">Email adresiniz</label>
+      </div>
+
+      <div class="form-floating">
+        <input autocomplete="current-password" type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
+        <label for="floatingPassword">Şifreniz</label>
+      </div>
+      <div class="mt-2 mb-2">
+        Eğer Hesabınız yoksa yeni hesap oluşturabilirsiniz. <a routerLink="/auth/register" class="text-primary">Yeni hesap oluştur</a>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit" (click)="login()">Giriş yap</button>
+    </form>
+  </main>

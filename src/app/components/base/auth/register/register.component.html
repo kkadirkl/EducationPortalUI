@@ -1,0 +1,39 @@
+
+<div class="d-flex justify-content-center mt-5">
+    <form [formGroup]="registerForm">
+        <div class="row">
+
+          <div class="col-lg-6">
+
+            <div class="mb-3">
+              <label for="exampleInputname" class="form-label">İsim</label>
+              <input type="text" autocomplete="off" class="form-control" id="exampleInputname" formControlName="firstName" aria-describedby="nameHelp">
+            </div>
+  
+            <div class="mb-3">
+              <label for="exampleInputlastname" class="form-label">Soy isim</label>
+              <input type="text" autocomplete="off" class="form-control" id="exampleInputlastname" formControlName="lastName" aria-describedby="lastnameHelp">
+            </div>
+          </div>
+          <div class="col-lg-6">
+
+            <div class="mb-3">
+              <label for="exampleInputemail" class="form-label">E-Posta</label>
+              <input type="email" autocomplete="off" class="form-control" id="exampleInputemail" formControlName="email" aria-describedby="emailHelp">
+            </div>
+    
+            <div class="mb-3">
+              <label for="exampleInputPassword" class="form-label">Şifre</label>
+              <input type="password" autocomplete="new-password" class="form-control" id="exampleInputPassword" formControlName="password">
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <div class="gap-2 d-grid">
+            <button type="submit" class="btn btn-primary" (click)="register()">Kayıt Ol</button>
+        </div>
+      </form>
+</div>
